@@ -36,7 +36,7 @@ if __name__ == '__main__':
         except Exception as e:
             bot.reply_to(message, f'Не удалось обработать команду\n{e}')
         else:
-            text = f'{amount} {base} {quote} - {response}'
+            text = f'{amount} {base} в {quote} - {response}'
             bot.send_message(message.chat.id, text)
 
     bot.polling(none_stop=True)
